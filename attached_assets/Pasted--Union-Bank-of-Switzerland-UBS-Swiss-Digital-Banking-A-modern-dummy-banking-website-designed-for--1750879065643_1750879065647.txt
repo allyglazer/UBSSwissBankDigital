@@ -1,0 +1,273 @@
+ Union Bank of Switzerland (UBS Swiss Digital Banking)
+A modern dummy banking website, designed for future deployment as an iOS and Android app, featuring dynamic UI and strict security workflows.
+Theme colors: White, Red, Gold
+Modes: Dark / Light Theme Toggle
+
+👤 User Registration & Authentication
+Sign-Up Requirements:
+
+Unused Username
+
+Password
+
+Date of Birth
+
+Email
+
+ID Card Upload
+
+Admin Approval Required:
+Admin validates registration before activating the account.
+
+After Approval:
+
+Assign random 9-digit account numbers
+
+Each account has a unique UBS ID (as a number)
+
+User selects account type:
+
+Personal
+
+Business
+
+🧍‍♂️ Personal Account Types
+Each account includes:
+
+Unique UBS ID
+
+Transaction history
+
+Dedicated user interface on click
+
+Account List:
+
+Current Account
+
+Savings Account
+
+Gold Credit Card
+
+Displayed as a designed card UI
+
+Card number is covered and cannot be revealed
+
+Shows "Frozen" tag
+
+If user attempts to:
+
+Reveal number
+
+Apply for new card
+
+Change delivery address
+
+Unfreeze
+
+Modify settings
+→ Show message: “Contact support for security purposes.”
+
+Retirement Savings
+
+Line of Credit, expands to:
+
+Unsecured Personal LOC
+
+Secured Personal LOC
+
+Overdraft LOC
+
+Credit Card (Revolving LOC)
+
+Home & Property LOC:
+
+Home Equity LOC (HELOC)
+
+Homeowner Personal LOC
+
+Bridge LOC
+
+🏢 Business Account Types
+Each account has a UBS ID and dedicated interface.
+
+Account List:
+
+Business Current
+
+Business Savings
+
+Treasury Account
+
+Business Credit, expands to:
+
+Unsecured Business LOC
+
+Secured Business LOC
+
+Demand LOC
+
+SBA LOC
+
+Non-Revolving LOC
+
+🔧 Specialized or Extended LOC Options
+Available to personal and business accounts:
+
+Construction LOC
+
+Margin LOC (investment-backed)
+
+Securities-Backed LOC
+
+Trade LOC (import/export)
+
+Inventory LOC
+
+Accounts Receivable LOC
+
+Student LOC (Canada model)
+
+Agricultural LOC
+
+Revolving LOC
+
+Non-Revolving LOC
+
+🧑‍💼 Admin Dashboard (Secure Control Panel)
+Key Features:
+
+View and search users
+
+Credit/Debit any user account:
+
+Click user > select account
+
+Input:
+
+Amount
+
+Date
+
+Transaction Type
+
+Description
+
+Approve/Reject Transactions
+
+User Management:
+
+Change PIN
+
+Delete User
+
+Ban User (banned users see: “Kindly contact support for assistance”)
+
+💳 User Dashboard & Account Interface
+Home Interface:
+Top card shows:
+
+“Hello, <username>”
+
+Main balance display
+
+Quick Actions: Send, Deposit, Transfer
+
+Below:
+
+Swipeable cards for each account with UBS ID
+
+Summary list of all account types
+
+Each Account UI:
+Dedicated view with:
+
+UBS ID
+
+Balance
+
+History
+
+Filters
+
+Contextual settings (e.g. "freeze card", "set PIN")
+
+🔒 Transactions & Security
+All transactions require admin approval
+
+User must enter PIN for:
+
+Transactions
+
+Accessing secure sections
+
+Transfer system:
+
+Choose source account
+
+Input recipient’s UBS ID
+
+Add description/details
+
+⚙️ Settings Page
+PIN Management – change freely
+
+For all other actions (email, ID, name, etc.):
+Show: “Contact your manager for security purpose.”
+
+🧾 Real-Time Notifications & Messaging
+Notification Center:
+Transaction Alerts
+
+Document Updates
+
+In-app UBS System Messages
+
+Real-time display on user dashboard and mobile app
+
+Clear badge and list with filter options
+
+💬 Support System
+Live Support Chat:
+Integrated real-time chat with admin-side interface
+
+Both users and admins can communicate live
+
+Used for:
+
+Card issues
+
+Account problems
+
+Manual verification
+
+Support escalations
+
+🌐 Language & Currency Features
+Google multilingual translation support
+
+Currency Conversion in real-time:
+
+Option to change default currency
+
+Converted balances shown across all accounts
+
+Popular currencies supported (USD, EUR, GBP, CAD, etc.)
+
+📂 Dropdown Menu Options
+Menu includes:
+
+POS Fast Pay
+
+Virtual Card
+
+Wire Transfer
+
+Bill Payment
+
+Loans
+
+Investments
+
+When clicked, show message:
+“Please contact support for security purposes.”
+

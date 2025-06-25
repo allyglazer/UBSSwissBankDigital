@@ -1,0 +1,59 @@
+A dummy bank website that can be optimistic for ios/android app with modern dynamic ui named Union Bank of Switzerland (UBS Swiss Digital Banking). users can signup with unused username and password with necessary information like DOB, email, id card and then this must be validated by admin before they have their assigned account with random 9 digit acct no for each type of bank acct. 2 types Personal/Business account where personal will have all types of accounts Current, Savings, Gold Credit card, retirement savings, Line of Credit (when clicked on the line of credit it then shows 1. Unsecured Personal Line of Credit
+ 2. Secured Personal Line of Credit
+ 3. Overdraft Line of Credit
+ 4. Credit Card (Revolving LOC)
+
+Home & Property Lines of Credit
+ 5. Home Equity Line of Credit (HELOC)
+ 6. Homeowner Personal Line of Credit
+ 7. Bridge Line of Credit. 
+While Business type of account will have Business Current, Business Savings, Treasury Account, Credits and this credit will have inside it Business Lines of Credit
+ 8. Unsecured Business Line of Credit
+ 9. Secured Business Line of Credit
+ 10. Demand Line of Credit
+ 11. SBA Line of Credit
+ 12. Non-Revolving Business Line of Credit
+
+Specialized or Other Types
+ 13. Construction Line of Credit
+ 14. Margin Line of Credit (against investments)
+ 15. Securities-Backed Line of Credit
+ 16. Trade Line of Credit (for importing/exporting goods)
+ 17. Inventory Line of Credit
+ 18. Accounts Receivable Line of Credit
+ 19. Student Line of Credit (common in Canada)
+ 20. Agricultural Line of Credit
+ 21. Revolving Line of Credit
+ 22. Non-Revolving Line of Credit
+
+create a clean admin dashboard with necessary functions where admin can put money into users account just by clicking on users and choosing which of his accounts to credit or debit and putting amount, date, transaction type, descriptio and this will reflect on the specific user platform listed by date, user can filter history view. Use dynamic dashboard where balance is view on a nice card up with Hello <username> and stack the rest of accounts as cards under it to be able to swipe through and also list all the main accounts under the balance card, dark/light theme. Smallbutton to make transaction and for deposit be on the on it which will take them to check deposit by snapping/uploading pictures, which will add to his checking as check deposit. Let users be able to chose from which account you send money out and which UBS ID to receive it with necessary info/descr. All transactions must be verified by admin before success. Let user be able to set pin and this will be used to make transaction and access settings. White red gold is the ui color
+Admin can change pin, delete user, ban user for transaction (kindly contact support for assistance) let each bank accounts have its own dynamic user interface that has infos histories and all necessities when click on it. Let settings, history, user dashboard has its dedicated page. Make the transfer page dynamic to be able to send within accounts and out to users. Use google multiligual. Let menu dropdown have Pos fast pay, virtual card, Wire transfer, Bill payment, loans, investments and when any of these is clicked on, give them the message to contact support for security purpose. Have option in settings to change Currencies using the popular currency and real time conversion which will reflect on user balance. let each accounts has its own UBS ID as number. user interface when clicked on even the credit accounts. on the gold credit card let it show a designed credit card with its number covered and unrevealble make it has frozen tag (ask to contact suport when they try to reveal it or apply for a new card, change delivery address, unfreeze or any other setting). support system with real live chat integrated to the admin interface and user. on setting page let there be "contact your manager for security purpose" when trying to change any detail except pin. real time notification centre for transaction alert, doc, UBS message inapp notification from system.
+Make sure you have a proper structure:
+
+pgsql
+Copy
+Edit
+/project-root
+  ├── server.js / index.js
+  ├── package.json
+  ├── firebaseConfig.js
+  └── public/ or views/
+
+Make sure your package.json has a start script:
+json
+Copy
+Edit
+"scripts": {
+  "start": "node server.js"
+}
+
+
+Use firebase/firestore for database, signup/login using email&pass. Save data
+apiKey: "AIzaSyBqtN-DtaiQ3vejT89FWS80rCYu5nvQW0U",
+  authDomain: "ubs-swiss-digital--banking.firebaseapp.com",
+  projectId: "ubs-swiss-digital--banking",
+  storageBucket: "ubs-swiss-digital--banking.firebasestorage.app",
+  messagingSenderId: "108654368871",
+  appId: "1:108654368871:web:2ec1787631c3d89ccf1cc2",
+  measurementId: "G-M8B71HH3TC"
+🌷
