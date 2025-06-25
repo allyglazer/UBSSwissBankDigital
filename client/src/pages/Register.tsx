@@ -151,28 +151,36 @@ export default function Register() {
                   onValueChange={(value) =>
                     setFormData(prev => ({ ...prev, accountType: value }))
                   }
-                  className="grid grid-cols-2 gap-4 mt-3"
+                  className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3"
                 >
-                  <div>
+                  <div className="relative">
                     <RadioGroupItem value="personal" id="personal" className="peer sr-only" />
                     <Label
                       htmlFor="personal"
-                      className="flex items-center space-x-3 p-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl hover:border-ubs-red transition-colors cursor-pointer peer-checked:border-ubs-red peer-checked:bg-red-50 dark:peer-checked:bg-red-900/20"
+                      className={`flex items-center space-x-3 p-4 border-2 rounded-xl hover:border-ubs-red transition-all duration-200 cursor-pointer ${
+                        formData.accountType === 'personal' 
+                          ? 'border-ubs-red bg-red-50 dark:bg-red-900/20' 
+                          : 'border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'
+                      }`}
                     >
-                      <User className="h-5 w-5" />
+                      <User className="h-5 w-5 text-ubs-red" />
                       <div>
                         <div className="font-medium text-gray-900 dark:text-white">Personal</div>
                         <div className="text-sm text-gray-500 dark:text-gray-400">Individual banking</div>
                       </div>
                     </Label>
                   </div>
-                  <div>
+                  <div className="relative">
                     <RadioGroupItem value="business" id="business" className="peer sr-only" />
                     <Label
                       htmlFor="business"
-                      className="flex items-center space-x-3 p-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl hover:border-ubs-red transition-colors cursor-pointer peer-checked:border-ubs-red peer-checked:bg-red-50 dark:peer-checked:bg-red-900/20"
+                      className={`flex items-center space-x-3 p-4 border-2 rounded-xl hover:border-ubs-red transition-all duration-200 cursor-pointer ${
+                        formData.accountType === 'business' 
+                          ? 'border-ubs-red bg-red-50 dark:bg-red-900/20' 
+                          : 'border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'
+                      }`}
                     >
-                      <Building className="h-5 w-5" />
+                      <Building className="h-5 w-5 text-ubs-red" />
                       <div>
                         <div className="font-medium text-gray-900 dark:text-white">Business</div>
                         <div className="text-sm text-gray-500 dark:text-gray-400">Company banking</div>

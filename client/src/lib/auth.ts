@@ -20,14 +20,30 @@ export interface AuthUser {
   createdAt: any;
 }
 
-export const signIn = async (email: string, password: string): Promise<AuthUser> => {
+export const signIn = async (emailOrUsername: string, password: string): Promise<AuthUser> => {
   try {
-    // First authenticate with Firebase
-    const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    const firebaseUser = userCredential.user;
+    let userData: any = null;
     
-    // Then get user data from Firestore
-    const userData = await FirestoreService.getUserByEmail(email);
+    // Check if input looks like an email (contains @)
+    if (emailOrUsername.includes('@')) {
+      // First authenticate with Firebase using email
+      const userCredential = await signInWithEmailAndPassword(auth, emailOrUsername, password);
+      const firebaseUser = userCredential.user;
+      
+      // Then get user data from Firestore
+      userData = await FirestoreService.getUserByEmail(emailOrUsername);
+    } else {
+      // It's a username, so find the user first to get their email
+      userData = await FirestoreService.getUserByUsername(emailOrUsername);
+      
+      if (!userData) {
+        throw new Error("User not found");
+      }
+      
+      // Now authenticate with Firebase using the found email
+      const userCredential = await signInWithEmailAndPassword(auth, userData.email, password);
+      const firebaseUser = userCredential.user;
+    }
     
     if (!userData) {
       throw new Error("User not found in database");

@@ -17,7 +17,7 @@ export default function Login() {
   const { toast } = useToast();
   
   const [formData, setFormData] = useState({
-    email: "",
+    emailOrUsername: "",
     password: "",
     rememberMe: false,
   });
@@ -37,7 +37,7 @@ export default function Login() {
     setIsLoading(true);
 
     try {
-      const user = await signIn(formData.email, formData.password);
+      const user = await signIn(formData.emailOrUsername, formData.password);
       setUser(user);
       
       if (user.username === "admin") {
@@ -90,14 +90,14 @@ export default function Login() {
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <Label htmlFor="email">Email Address</Label>
+                <Label htmlFor="emailOrUsername">Email or Username</Label>
                 <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
+                  id="emailOrUsername"
+                  name="emailOrUsername"
+                  type="text"
+                  value={formData.emailOrUsername}
                   onChange={handleInputChange}
-                  placeholder="Enter your email"
+                  placeholder="Enter your email or username"
                   className="mt-2"
                   required
                 />
